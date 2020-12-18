@@ -1,0 +1,114 @@
+#page {
+	height: 100%;
+	padding:50px;
+	font-size: $font-size;
+	font-size: $font-size-res;
+	line-height: 3.6vw;
+	@media #{$tabletlandscape}{
+		padding: 30px;
+		font-size: 4.6vw;
+		line-height: 4.9vw;
+	}
+	@media #{$mobile}{
+		height: auto;
+		padding: 20px;
+	}
+	#logo {
+		width:40%;
+		margin-left:60%;
+		margin-bottom: 150px;
+		margin-bottom: 8vw;
+		opacity: 0;
+		transition: opacity 1s ease;
+		&.showme {
+			opacity: 1;
+		}
+		@media #{$tabletlandscape}{
+			margin-bottom: 90px;
+			margin-bottom: 6vw;
+			width:60%;
+			margin-left:40%;
+		}
+		@media #{$mobile}{
+			margin-bottom: 60px;
+		}
+		svg {
+			width: 100%;
+			height: auto;
+		}
+	}
+	#content {
+		opacity: 0;
+		transition: opacity 1s ease;
+		&.showme {
+			opacity: 1;
+		}
+		#copy {
+			width: 78%;
+			margin-bottom: 8vw;
+			p {
+				margin-bottom: 1em;
+			}
+			@media #{$tabletlandscape}{
+				margin-bottom: 6vw;
+				width: 95%;
+			}
+			@media #{$mobile}{
+				margin-bottom: 60px;
+				width: 100%;
+			}
+		}
+		#staff {
+			margin-bottom: 150px;
+			margin-bottom: 8vw;
+			@media #{$tabletlandscape}{
+				margin-bottom: 90px;
+				margin-bottom: 6vw;
+			}
+			@media #{$mobile}{
+				// margin-bottom: 60px;
+			}
+			.member {
+				margin-bottom: 50px;
+				margin-bottom: 4vw;
+				@media #{$tabletlandscape}{
+					margin-bottom: 30px;
+					margin-bottom: 4vw;
+				}
+				@media #{$mobile}{
+					margin-bottom: 20px;
+					margin-bottom: 4vw;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+				img {
+					width: 25%;
+					@media #{$tabletlandscape}{
+						width: 35%;
+					}
+					@media #{$mobile}{
+						width: 40%;
+					}
+				}
+				.name, .position {
+					display: block;
+				}
+			}
+		}
+		#address, #contact, #social, #credit {
+			margin-bottom: 50px;
+			@media #{$tabletlandscape}{
+				margin-bottom: 30px;
+			}
+			@media #{$mobile}{
+				margin-bottom: 20px;
+			}
+		}
+		#credit {
+			@media #{$mobile}{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
